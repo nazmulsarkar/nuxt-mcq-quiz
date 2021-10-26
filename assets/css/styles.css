@@ -1,0 +1,16 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 35px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.btn {
+  background: #6a1ce8;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 8px 70px;
+  text-decoration: none;
+}
