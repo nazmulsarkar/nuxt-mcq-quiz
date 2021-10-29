@@ -19,7 +19,7 @@
     <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
       <div class="home-content">
         <h2 class="title-home">MCQ TEST</h2>
-        <p class="mt-3 text-gray-600">Total 2 questions</p>
+        <p class="mt-3 text-gray-600">Total 6 questions</p>
 
         <NuxtLink to="/mcq" class="btn">START</NuxtLink>
       </div>
