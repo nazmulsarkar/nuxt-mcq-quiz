@@ -35,7 +35,7 @@ export default {
     loading: true,
     pageTitle: 'MCQ TEST',
     limit: 30,
-    baseURL: `${process.env.API_BASE_URL}`,
+    baseURLAPI: `${process.env.baseUrlAPI}`,
     questionList: [],
     answers: {},
     score: 0,
@@ -43,7 +43,7 @@ export default {
   }),
   computed: {
     questionsAPI() {
-      return `http://localhost:5000/api/questions`
+      return `https://nestjs-mcq-quiz-api.herokuapp.com/api/questions`
     },
   },
   watch: {

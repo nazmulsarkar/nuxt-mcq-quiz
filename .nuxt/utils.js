@@ -200,7 +200,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: app.router.options.base,
-      env: {}
+      env: {"baseUrl":"http://localhost:3000","baseUrlAPI":"https://nestjs-mcq-quiz-api.herokuapp.com/api"}
     }
     // Only set once
 

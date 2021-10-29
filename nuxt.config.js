@@ -40,9 +40,14 @@ export default {
     '@nuxtjs/pwa',
   ],
 
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+    baseUrlAPI: process.env.API_BASE_URL || 'http://localhost:5000/api'
+  },
+
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseUrl: process.env.API_BASE_URL || 'http://localhost:5000/api',
+    baseUrlAPI: process.env.API_BASE_URL || 'http://localhost:5000/api',
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
