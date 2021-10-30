@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mcg-page">
     <div v-if="loading" class="loading-page">
       <p>Loading questions...</p>
     </div>
@@ -70,7 +70,7 @@ export default {
             // }
 
             if (this.timerCount === 0 && !this.loading) {
-              this.finishQuiz()
+              // this.finishQuiz()
             }
           }, 1000)
         }
@@ -115,33 +115,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.form-wrap {
-  width: 773px;
-  margin: 0 auto;
-}
-.question {
-  background: #fceafe;
-  border-radius: 20px;
-  padding: 20px;
-  text-align: left;
-  color: #6a1ce8;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 14px;
-}
-.input {
-  margin-left: 20px;
-}
-.finish-btn {
-  cursor: pointer;
-  float: right;
-}
-.timer-text {
-  float: right;
-}
-.btn-wrap {
-  margin-bottom: 20px;
-}
-</style>

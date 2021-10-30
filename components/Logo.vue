@@ -12,16 +12,3 @@
     </div>
   </div>
 </template>
-
-<style scoped>
-.logo {
-  font-size: 34px;
-  color: #11b981;
-  text-align: center;
-}
-.logo > a {
-  text-decoration: none;
-  color: #6A1CE8;
-}
-
-</style>
