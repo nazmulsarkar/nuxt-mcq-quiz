@@ -1,7 +1,12 @@
 <template>
   <div>
-    <div class="form-wrap">
-      <div class="question timer">Remaining time <span class="timer-text">00:00:{{ timerCount }}</span></div>
+    <div v-if="loading" class="loading-page">
+      <p>Loading questions...</p>
+    </div>
+    <div v-if="!loading" class="form-wrap">
+      <div class="question timer">
+        Remaining time <span class="timer-text">00:00:{{ timerCount }}</span>
+      </div>
       <form>
         <div
           v-for="(question, i) in questionList"
@@ -39,7 +44,7 @@ export default {
     questionList: [],
     answers: {},
     score: 0,
-    timerCount: 10,
+    timerCount: 15,
   }),
   computed: {
     questionsAPI() {
@@ -49,7 +54,6 @@ export default {
   watch: {
     options: {
       handler() {
-        this.loading = true
         setTimeout(() => {
           this.fetchQuestions()
         }, 500)
@@ -60,9 +64,12 @@ export default {
       handler(value) {
         if (value > 0) {
           setTimeout(() => {
-            this.timerCount--
+            console.log(this.loading)
+            // if (this.loading === false) {
+              this.timerCount--
+            // }
 
-            if (this.timerCount === 0) {
+            if (this.timerCount === 0 && !this.loading) {
               this.finishQuiz()
             }
           }, 1000)
@@ -75,12 +82,17 @@ export default {
     this.fetchQuestions()
   },
   methods: {
-    fetchQuestions() {
-      axios.get(this.questionsAPI).then((response) => {
+    async fetchQuestions() {
+      await axios.get(this.questionsAPI).then((response) => {
         // console.log(response)
-        this.questionList = response && response.data && response.data.data
-        this.loading = false
+
+        // setTimeout(() => {
+          this.questionList = response && response.data && response.data.data
+          this.loading = false
+          this.timerCount = 15;
+        // }, 20000)
       })
+      // console.log(':', this.loading)
     },
     finishQuiz() {
       this.score = 0

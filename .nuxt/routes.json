@@ -3,21 +3,18 @@
     "name": "mcq",
     "path": "/mcq",
     "component": "/Users/nazmulhasan/codes/NodeJS/nuxt-mcq-app/pages/mcq.vue",
-    "chunkName": "pages/mcq",
-    "_name": "_ca5780d8"
+    "chunkName": "pages/mcq"
   },
   {
     "name": "result",
     "path": "/result",
     "component": "/Users/nazmulhasan/codes/NodeJS/nuxt-mcq-app/pages/result.vue",
-    "chunkName": "pages/result",
-    "_name": "_0c1c8098"
+    "chunkName": "pages/result"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/nazmulhasan/codes/NodeJS/nuxt-mcq-app/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_0a839b0b"
+    "chunkName": "pages/index"
   }
 ]
