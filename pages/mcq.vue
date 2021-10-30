@@ -64,13 +64,10 @@ export default {
       handler(value) {
         if (value > 0) {
           setTimeout(() => {
-            console.log(this.loading)
-            // if (this.loading === false) {
-              this.timerCount--
-            // }
+            this.timerCount--
 
             if (this.timerCount === 0 && !this.loading) {
-              // this.finishQuiz()
+              this.finishQuiz()
             }
           }, 1000)
         }
@@ -87,9 +84,9 @@ export default {
         // console.log(response)
 
         // setTimeout(() => {
-          this.questionList = response && response.data && response.data.data
-          this.loading = false
-          this.timerCount = 15;
+        this.questionList = response && response.data && response.data.data
+        this.loading = false
+        this.timerCount = 15
         // }, 20000)
       })
       // console.log(':', this.loading)
